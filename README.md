@@ -146,15 +146,6 @@ rather than lowering the bar.
   the replay harness exist and refuse to invent numbers; they need an API key (see
   [COST.md](COST.md) and `apps/api/src/llm/recordings/`).
 
-## What I'd rebuild first as a real Madlan feature
-
-Drop the free-text step on listing pages: the listing is already structured, so the
-fair-price card can render directly from listing data — intent extraction stays only
-for search. Then replace the comparables engine's inputs: the full transaction record
-with coordinates, so "comparable" means _within N meters_ rather than _same
-neighborhood name_, and a proper time adjustment (a price index per area) so older
-deals count without making trend claims by hand. The grounding contract (facts in
-code, placeholders only, guard, template fallback) carries over unchanged.
 
 
 ## How to run locally
@@ -218,28 +209,3 @@ the regex fallback gets **20/25** exact; its 5 misses are exactly the language-j
 cases (prices in words, a typo'd city, implied millions, naming an unknown city, a
 neighborhood). LLM results: TODO(measure) — `evals/results/` holds every run.
 
-## Deploy
-
-One service: Fastify serves the API and the built frontend from the same origin.
-
-**Render (recommended):** New → Blueprint → select this repo. [`render.yaml`](render.yaml)
-runs `npm ci && npm run build && npm test` (tests gate the deploy), then `npm start`,
-health check `/api/health`, exactly one instance, a small disk for the budget counter,
-and a generated `METRICS_TOKEN`. Then:
-
-1. Set `LLM_API_KEY` in the dashboard — it is never committed.
-2. **Set a monthly spend limit for the key's workspace in the Anthropic Console.** That is
-   the real hard cap; the in-app daily budget is a second line of defense.
-3. Check `/api/health` shows `"mode": "llm"`.
-
-CI ([`.github/workflows/ci.yml`](.github/workflows/ci.yml)) runs on every push and PR:
-typecheck, lint, format, tests with coverage, the intent-eval regression gate, build and
-Playwright.
-
-**Any container host:** the [`Dockerfile`](Dockerfile) builds the same artifact. It was
-not built locally (no Docker on the dev machine) — untested until its first build.
-
-## How this was built
-
-With AI assistance throughout; the honest log — including answers I caught being
-wrong — is [AI_LOG.md](AI_LOG.md).

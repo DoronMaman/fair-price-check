@@ -10,8 +10,7 @@ in, readable Hebrew out), and everything in between can be deterministic, checka
 code — which is what makes "never state what the data doesn't support" enforceable
 rather than hoped for.
 
-**Live URL:** TODO — add after the first deploy ([Deploy](#deploy)).
-`/api/health` · `/api/data-quality` · `/api/metrics` (bearer token)
+**Live URL:** https://fair-price-check.onrender.com/
 
 ---
 
@@ -157,27 +156,6 @@ neighborhood name_, and a proper time adjustment (a price index per area) so old
 deals count without making trend claims by hand. The grounding contract (facts in
 code, placeholders only, guard, template fallback) carries over unchanged.
 
-## Open questions I'd ask Madlan
-
-1. **Source precedence.** Is `רשות המסים > מתווך > בעל נכס` right? When broker and
-   tax-authority prices disagree for one deal, which does Madlan trust, and why?
-2. **`price_per_sqm`.** How was the column computed? 30 of 520 values disagree with
-   price ÷ size — a different size definition (gross vs. net) would change every ₪/m²
-   comparison.
-3. **"חדש מקבלן" with old `year_built`** — data error, or "renovated to new"? It decides
-   whether condition can ever be a matching criterion.
-4. **Coordinates.** Is there geo data per deal? Neighborhood names are inconsistent;
-   distance would make "comparable" far more robust.
-5. **What should a verdict be allowed to say?** "Below range" can mean a bargain or a
-   problem the data doesn't show (condition, legal status). Is there editorial or legal
-   guidance on price judgments shown to buyers?
-6. **Does explanation #2 earn its cost?** The model sees only the comparison's _shape_,
-   so its wording is the same for every query with that shape — which is why its cache
-   is keyed on that shape (≈100% hit rate after warm-up). The template already says
-   everything true; would Madlan rather spend that budget elsewhere? Details in
-   [COST.md](COST.md).
-
----
 
 ## How to run locally
 

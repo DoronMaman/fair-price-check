@@ -1,0 +1,31 @@
+{
+  "name": "@fpc/api",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "@fastify/rate-limit": "^11.2.0",
+    "@fastify/static": "^10.1.5",
+    "@fpc/shared": "*",
+    "csv-parse": "^7.0.3",
+    "fastify": "^5.12.5",
+    "lru-cache": "^11.5.3",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2",
+    "fast-check": "^4.10.2",
+    "tsx": "^4.19.0"
+  },
+  "scripts": {
+    "data:report": "tsx src/scripts/printDataQuality.ts",
+    "eval:intent": "tsx src/scripts/evalIntent.ts",
+    "dev": "tsx watch src/server/main.ts",
+    "start": "node --enable-source-maps dist/server.mjs",
+    "build": "node scripts/bundle.mjs",
+    "start:dev": "tsx src/server/main.ts",
+    "eval:explain": "tsx src/scripts/evalExplain.ts",
+    "cost:report": "tsx src/scripts/costReport.ts"
+  }
+}

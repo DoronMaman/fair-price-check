@@ -1,0 +1,12 @@
+{
+  "//": "Solution file: app code (DOM types only) and tests (DOM + Node) are checked separately.",
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
+    },
+    {
+      "path": "./tsconfig.test.json"
+    }
+  ]
+}

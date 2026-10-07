@@ -1,0 +1,9 @@
+node_modules
+dist
+my-react-app
+evals/results
+package-lock.json
+apps/api/data
+coverage
+test-results
+playwright-report

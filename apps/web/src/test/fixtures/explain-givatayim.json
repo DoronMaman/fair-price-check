@@ -1,0 +1,126 @@
+{
+  "dataVersion": "c2828c9e1b31",
+  "explanation": {
+    "source": "template",
+    "paragraphs": [
+      [
+        {
+          "type": "text",
+          "text": "ההשוואה מבוססת על "
+        },
+        {
+          "type": "fact",
+          "factId": "n_comps",
+          "text": "8 עסקאות"
+        },
+        {
+          "type": "text",
+          "text": " של "
+        },
+        {
+          "type": "fact",
+          "factId": "scope_label",
+          "text": "דירות עם ⁦3.5–4.5⁩ חדרים בגבעתיים"
+        },
+        {
+          "type": "text",
+          "text": ", שנרשמו בין "
+        },
+        {
+          "type": "fact",
+          "factId": "date_from",
+          "text": "דצמבר 2021"
+        },
+        {
+          "type": "text",
+          "text": " ל"
+        },
+        {
+          "type": "fact",
+          "factId": "date_to",
+          "text": "יולי 2026"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "המחיר החציוני למ״ר בעסקאות אלה הוא "
+        },
+        {
+          "type": "fact",
+          "factId": "median_ppsqm",
+          "text": "‏52,700 ‏₪ למ״ר"
+        },
+        {
+          "type": "text",
+          "text": ". לפי שטח של "
+        },
+        {
+          "type": "fact",
+          "factId": "size_sqm",
+          "text": "95 מ״ר"
+        },
+        {
+          "type": "text",
+          "text": ", טווח המחירים המשוער לנכס הוא בין "
+        },
+        {
+          "type": "fact",
+          "factId": "estimate_low",
+          "text": "‏4,460,000 ‏₪"
+        },
+        {
+          "type": "text",
+          "text": " ל-"
+        },
+        {
+          "type": "fact",
+          "factId": "estimate_high",
+          "text": "‏5,880,000 ‏₪"
+        },
+        {
+          "type": "text",
+          "text": ", עם חציון של "
+        },
+        {
+          "type": "fact",
+          "factId": "estimate_median",
+          "text": "‏5,010,000 ‏₪"
+        },
+        {
+          "type": "text",
+          "text": "."
+        }
+      ],
+      [
+        {
+          "type": "text",
+          "text": "המחיר המבוקש, "
+        },
+        {
+          "type": "fact",
+          "factId": "asking_price",
+          "text": "‏3,900,000 ‏₪"
+        },
+        {
+          "type": "text",
+          "text": ", נמוך מהטווח הזה: "
+        },
+        {
+          "type": "fact",
+          "factId": "asking_vs_median_pct",
+          "text": "22%"
+        },
+        {
+          "type": "text",
+          "text": " מתחת לחציון."
+        }
+      ]
+    ],
+    "fallbackReason": "llm_not_configured"
+  }
+}

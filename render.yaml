@@ -1,0 +1,42 @@
+# Render Blueprint — one web service: Fastify serves the API and the built UI.
+# Deploy: Render dashboard → New → Blueprint → pick this repo. Then set LLM_API_KEY
+# (marked sync: false, so it is entered in the dashboard and never committed).
+services:
+  - type: web
+    name: fair-price-check
+    runtime: node
+    # "free" spins down when idle (cold start of up to a minute on the first visit).
+    # For an interview demo use "starter" (always on).
+    plan: starter
+    # Caches, the circuit breaker and metrics are per-process: exactly one instance.
+    # Scaling out needs Redis first (see COST.md).
+    numInstances: 1
+    # Persists the daily LLM call counter across deploys/restarts (BUDGET_STATE_FILE).
+    # Render disks require a paid plan and a single instance — both already true here.
+    disk:
+      name: state
+      mountPath: /var/data
+      sizeGB: 1
+    # Tests gate the deploy: a failing test means no new version goes live.
+    buildCommand: npm ci && npm run build && npm test
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: '22'
+      - key: LLM_API_KEY
+        sync: false
+      - key: LLM_MODEL
+        value: claude-haiku-4-5
+      - key: LLM_DAILY_CALL_BUDGET
+        value: '20000'
+      - key: RATE_LIMIT_PER_MINUTE
+        value: '20'
+      - key: TRUST_PROXY_HOPS
+        value: '1'
+      - key: BUDGET_STATE_FILE
+        value: /var/data/llm-budget.json
+      - key: METRICS_TOKEN
+        generateValue: true
+      - key: LOG_LEVEL
+        value: info

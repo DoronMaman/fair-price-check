@@ -1,0 +1,217 @@
+{
+  "dataVersion": "c2828c9e1b31",
+  "intent": {
+    "draft": {
+      "city": "גבעתיים",
+      "propertyType": "apartment",
+      "rooms": 4,
+      "sizeSqm": 95,
+      "floor": 3,
+      "askingPriceNis": 3900000,
+      "hasElevator": true
+    },
+    "source": "fallback",
+    "fallbackReason": "llm_not_configured",
+    "dropped": [],
+    "unparsed": []
+  },
+  "draft": {
+    "city": "גבעתיים",
+    "propertyType": "apartment",
+    "rooms": 4,
+    "sizeSqm": 95,
+    "floor": 3,
+    "askingPriceNis": 3900000,
+    "hasElevator": true
+  },
+  "dropped": [],
+  "analysis": {
+    "dataVersion": "c2828c9e1b31",
+    "query": {
+      "city": "גבעתיים",
+      "propertyType": "apartment",
+      "rooms": 4,
+      "sizeSqm": 95,
+      "floor": 3,
+      "hasElevator": true,
+      "askingPriceNis": 3900000
+    },
+    "scope": "city_type_rooms",
+    "appliedCriteria": { "city": "גבעתיים", "propertyType": "apartment", "rooms": { "min": 3.5, "max": 4.5 } },
+    "basis": "pricePerSqm",
+    "confidence": "MEDIUM",
+    "nComps": 8,
+    "stats": {
+      "n": 8,
+      "median": 52739.98226950354,
+      "p25": 46950.88187038556,
+      "p75": 61899.51298701298,
+      "min": 44117.117117117115,
+      "max": 72575.75757575757,
+      "dateFrom": "2021-12-04",
+      "dateTo": "2026-07-26"
+    },
+    "estimate": { "low": 4460000, "median": 5010000, "high": 5880000 },
+    "verdict": { "verdict": "below_range", "askingVsMedian": -0.22155688622754488 },
+    "comparables": [
+      {
+        "dealId": "D100029",
+        "dealDate": "2026-07-26",
+        "datePrecision": "day",
+        "source": "tax_authority",
+        "city": "גבעתיים",
+        "neighborhood": "גבעת רמב\"ם",
+        "propertyType": "apartment",
+        "rooms": 3.5,
+        "sizeSqm": 94,
+        "priceNis": 4525000,
+        "pricePerSqm": 48138.29787234042,
+        "similarity": 0.9034533344540908
+      },
+      {
+        "dealId": "D100312",
+        "dealDate": "2026-01-26",
+        "datePrecision": "day",
+        "source": "tax_authority",
+        "city": "גבעתיים",
+        "neighborhood": "גבעת רמב\"ם",
+        "propertyType": "apartment",
+        "rooms": 4.5,
+        "sizeSqm": 99,
+        "priceNis": 7185000,
+        "pricePerSqm": 72575.75757575757,
+        "similarity": 0.8661253007032754
+      },
+      {
+        "dealId": "D100408",
+        "dealDate": "2026-05-11",
+        "datePrecision": "day",
+        "source": "tax_authority",
+        "city": "גבעתיים",
+        "neighborhood": "שינקין",
+        "propertyType": "apartment",
+        "rooms": 3.5,
+        "sizeSqm": 88,
+        "priceNis": 6124000,
+        "pricePerSqm": 69590.90909090909,
+        "similarity": 0.8461978297328995
+      },
+      {
+        "dealId": "D100058",
+        "dealDate": "2024-09-18",
+        "datePrecision": "day",
+        "source": "broker",
+        "city": "גבעתיים",
+        "neighborhood": "ארלוזורוב",
+        "propertyType": "apartment",
+        "rooms": 3.5,
+        "sizeSqm": 92,
+        "priceNis": 4366000,
+        "pricePerSqm": 47456.52173913043,
+        "similarity": 0.8447808718693838
+      },
+      {
+        "dealId": "D100045",
+        "dealDate": "2021-12-12",
+        "datePrecision": "day",
+        "source": "tax_authority",
+        "city": "גבעתיים",
+        "neighborhood": "רמת יוסף",
+        "propertyType": "apartment",
+        "rooms": 4,
+        "sizeSqm": 106,
+        "priceNis": 4816000,
+        "pricePerSqm": 45433.96226415094,
+        "similarity": 0.796428385588658
+      }
+    ],
+    "excludedOutliers": [],
+    "facts": {
+      "city": { "value": "גבעתיים", "formatted": "גבעתיים", "description": "העיר של הנכס" },
+      "scope_label": {
+        "value": "דירות עם ⁦3.5–4.5⁩ חדרים בגבעתיים",
+        "formatted": "דירות עם ⁦3.5–4.5⁩ חדרים בגבעתיים",
+        "description": "אילו עסקאות נחשבו דומות (סוג, חדרים, מיקום)"
+      },
+      "n_comps": { "value": 8, "formatted": "8 עסקאות", "description": "מספר העסקאות הדומות שעליהן מבוסס החישוב" },
+      "date_from": {
+        "value": "2021-12-04",
+        "formatted": "דצמבר 2021",
+        "description": "מועד העסקה המוקדמת ביותר בין הדומות"
+      },
+      "date_to": {
+        "value": "2026-07-26",
+        "formatted": "יולי 2026",
+        "description": "מועד העסקה המאוחרת ביותר בין הדומות"
+      },
+      "date_range_years": {
+        "value": "2021–2026",
+        "formatted": "⁦2021–2026⁩",
+        "description": "טווח השנים של העסקאות הדומות"
+      },
+      "median_ppsqm": {
+        "value": 52700,
+        "formatted": "‏52,700 ‏₪ למ״ר",
+        "description": "חציון המחיר למ״ר בעסקאות הדומות"
+      },
+      "p25_ppsqm": { "value": 47000, "formatted": "‏47,000 ‏₪ למ״ר", "description": "הרבעון התחתון של המחיר למ״ר" },
+      "p75_ppsqm": { "value": 61900, "formatted": "‏61,900 ‏₪ למ״ר", "description": "הרבעון העליון של המחיר למ״ר" },
+      "size_sqm": { "value": 95, "formatted": "95 מ״ר", "description": "שטח הנכס שנבדק" },
+      "estimate_low": {
+        "value": 4460000,
+        "formatted": "‏4,460,000 ‏₪",
+        "description": "הגבול התחתון של טווח המחירים המשוער לנכס (הרבעון התחתון)"
+      },
+      "estimate_median": { "value": 5010000, "formatted": "‏5,010,000 ‏₪", "description": "המחיר החציוני המשוער לנכס" },
+      "estimate_high": {
+        "value": 5880000,
+        "formatted": "‏5,880,000 ‏₪",
+        "description": "הגבול העליון של טווח המחירים המשוער לנכס (הרבעון העליון)"
+      },
+      "asking_price": { "value": 3900000, "formatted": "‏3,900,000 ‏₪", "description": "המחיר המבוקש" },
+      "asking_vs_median_pct": {
+        "value": 0.22155688622754488,
+        "formatted": "22%",
+        "description": "הפער באחוזים (ללא סימן) בין המחיר המבוקש למחיר החציוני המשוער; הכיוון נקבע לפי ה-verdict"
+      }
+    }
+  },
+  "explanation": {
+    "source": "template",
+    "paragraphs": [
+      [
+        { "type": "text", "text": "ההשוואה מבוססת על " },
+        { "type": "fact", "factId": "n_comps", "text": "8 עסקאות" },
+        { "type": "text", "text": " של " },
+        { "type": "fact", "factId": "scope_label", "text": "דירות עם ⁦3.5–4.5⁩ חדרים בגבעתיים" },
+        { "type": "text", "text": ", שנרשמו בין " },
+        { "type": "fact", "factId": "date_from", "text": "דצמבר 2021" },
+        { "type": "text", "text": " ל" },
+        { "type": "fact", "factId": "date_to", "text": "יולי 2026" },
+        { "type": "text", "text": "." }
+      ],
+      [
+        { "type": "text", "text": "המחיר החציוני למ״ר בעסקאות אלה הוא " },
+        { "type": "fact", "factId": "median_ppsqm", "text": "‏52,700 ‏₪ למ״ר" },
+        { "type": "text", "text": ". לפי שטח של " },
+        { "type": "fact", "factId": "size_sqm", "text": "95 מ״ר" },
+        { "type": "text", "text": ", טווח המחירים המשוער לנכס הוא בין " },
+        { "type": "fact", "factId": "estimate_low", "text": "‏4,460,000 ‏₪" },
+        { "type": "text", "text": " ל-" },
+        { "type": "fact", "factId": "estimate_high", "text": "‏5,880,000 ‏₪" },
+        { "type": "text", "text": ", עם חציון של " },
+        { "type": "fact", "factId": "estimate_median", "text": "‏5,010,000 ‏₪" },
+        { "type": "text", "text": "." }
+      ],
+      [
+        { "type": "text", "text": "המחיר המבוקש, " },
+        { "type": "fact", "factId": "asking_price", "text": "‏3,900,000 ‏₪" },
+        { "type": "text", "text": ", נמוך מהטווח הזה: " },
+        { "type": "fact", "factId": "asking_vs_median_pct", "text": "22%" },
+        { "type": "text", "text": " מתחת לחציון." }
+      ]
+    ],
+    "fallbackReason": "llm_not_configured"
+  },
+  "explanationPending": false
+}

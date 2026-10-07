@@ -1,0 +1,16 @@
+{
+  "dataVersion": "c2828c9e1b31",
+  "intent": {
+    "draft": { "propertyType": "apartment", "rooms": 3, "sizeSqm": 70, "askingPriceNis": 2100000 },
+    "source": "fallback",
+    "fallbackReason": "llm_not_configured",
+    "dropped": [],
+    "unparsed": [],
+    "clarificationNeeded": "באיזו עיר נמצא הנכס?"
+  },
+  "draft": { "propertyType": "apartment", "rooms": 3, "sizeSqm": 70, "askingPriceNis": 2100000 },
+  "dropped": [],
+  "analysis": null,
+  "explanation": null,
+  "explanationPending": false
+}

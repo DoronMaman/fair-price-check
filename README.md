@@ -146,8 +146,6 @@ rather than lowering the bar.
   the replay harness exist and refuse to invent numbers; they need an API key (see
   [COST.md](COST.md) and `apps/api/src/llm/recordings/`).
 
-
-
 ## How to run locally
 
 Requires Node 22 LTS (`.nvmrc`; ≥ 22.12).
@@ -208,4 +206,3 @@ city not in the data, English city, prices in words, two injection attempts):
 the regex fallback gets **20/25** exact; its 5 misses are exactly the language-judgment
 cases (prices in words, a typo'd city, implied millions, naming an unknown city, a
 neighborhood). LLM results: TODO(measure) — `evals/results/` holds every run.
-

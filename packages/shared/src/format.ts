@@ -8,10 +8,13 @@ const currency = new Intl.NumberFormat('he-IL', {
   currency: 'ILS',
   maximumFractionDigits: 0,
 });
+// minimumFractionDigits must be explicit: Node 22 pads currency to 2 decimals in compact
+// notation ("3.90M"), Node 24 doesn't ("3.9M"). Caught by CI running Node 22.
 const currencyCompact = new Intl.NumberFormat('he-IL', {
   notation: 'compact',
   style: 'currency',
   currency: 'ILS',
+  minimumFractionDigits: 0,
   maximumFractionDigits: 2,
 });
 const integer = new Intl.NumberFormat('he-IL', { maximumFractionDigits: 0 });
